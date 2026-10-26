@@ -1,0 +1,98 @@
+:root {
+  --bg: #f7f5ef;
+  --text: #1c2233;
+  --card: #ffffff;
+  --accent: #2b4fb8;
+  --border: #d9d5c8;
+}
+
+:root[data-theme="dark"] {
+  --bg: #10142a;
+  --text: #eceff8;
+  --card: #1a2040;
+  --accent: #9db8ff;
+  --border: #323a66;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1.25rem 2.5rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .site-header {
+    padding: 2rem 3rem;
+  }
+}
